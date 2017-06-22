@@ -23,16 +23,6 @@ $(call inherit-product, device/leeco/s2/full_s2.mk)
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/leeco/s2/device.mk)
 
-# must be before including omni part
-TARGET_BOOTANIMATION_SIZE := 1080x720
-
-# SELinux
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
-
-PRODUCT_COPY_FILES += \
-    bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := s2
 PRODUCT_NAME := omni_s2
